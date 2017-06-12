@@ -14,16 +14,6 @@
 
 - Open your .vimrc: `:e ~/.vimrc`
 
-### Getting to know the basics
-
-- https://vim-adventures.com/
-
-- http://www.vimgenius.com/
-
-### Advanced vimming
-
-- https://vimgifs.com/
-
 ## Modal editing
 
 ### NORMAL MODE
@@ -52,4 +42,52 @@
 
 - Ex commands
 
-## Movement
+## VIM LANGUAGE
+
+- VERBS:
+    - d: delete (char, D: line)
+    - c: change (char, C: line)
+    - y: yank ( = copy )
+    - v: visually select (char, V: line)
+
+- MODIFIERS
+    - i: inside
+    - a: around
+    - NUM: number
+    - t: search and stop before
+    - f: search and land on it
+    - /: find a string (regex)
+
+- NOUNS
+    - w: word
+    - s or ): sentence
+    - p or }: paragraph
+    - t: tag (think HTML/XML)
+    - b: block (think programming)
+
+- A full sentence consists of VERB MODIFIER NOUN
+
+### Getting to know the basics
+- https://vim-adventures.com/
+- http://www.vimgenius.com/
+
+### Advanced vimming
+- https://vimgifs.com/
+- https://danielmiessler.com/study/vim/
+- http://vimgolf.com/
+
+## BASIC COMMANDS
+
+- Save file: `:w`
+- Save file and quit: `:wq` or `ZZ`
+- Quit without saving: `:q!`
+- Move vim to background: `C-z`
+- Move vim to foreground: `fg`
+- Execute shell commands: `!mkdir -p hello/world`
+
+## SEARCH AND REPLACE TEXT
+
+- `/bar`
+- You can use regular expressions: `/[bz]ar`
+- Replace text in file with: `:%s/bar/foo/g`
+- Or replace in next three lines: `3V:s/bar/foo/g`
